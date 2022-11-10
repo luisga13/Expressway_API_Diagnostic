@@ -35,3 +35,9 @@ pip install requests
 ```
 python3 DiagnosticAPI.py
 ```
+
+## Limitations: 
+
+1. All the nodes within the same cluster need to use the same credentials. If the "admin" credentials are different on each node, create the same administrator account with API access on each node. 
+2. Cluster peers most be defined with a FQDN instead of an IP. API requests in this script are setup to be secured, meaning that it will verify the host in the url against the certificate. 
+
